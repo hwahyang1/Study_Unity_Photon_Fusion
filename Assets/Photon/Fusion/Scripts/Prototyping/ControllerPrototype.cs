@@ -14,8 +14,10 @@ public class ControllerPrototype : Fusion.NetworkBehaviour {
 
   public bool TransformLocal = false;
 
-  [DrawIf(nameof(ShowSpeed), Hide = true)]
+  [DrawIf(nameof(ShowSpeed), DrawIfHideType.Hide, DoIfCompareOperator.NotEqual)]
   public float Speed = 6f;
+
+  bool HasNCC => GetComponent<NetworkCharacterControllerPrototype>();
 
   bool ShowSpeed => this && !TryGetComponent<NetworkCharacterControllerPrototype>(out _);
 

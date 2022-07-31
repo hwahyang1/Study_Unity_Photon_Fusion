@@ -102,10 +102,10 @@ public static unsafe class FusionBurstIntegration {
   }
 
   static void Write(NetBitBuffer* buffer, ulong value, int bits) {
-    var bitsUsed = buffer->OffsetBitsUnsafe & USEDMASK;
+    var bitsUsed = buffer->_offsetBits & USEDMASK;
     var bitsFree = BITCOUNT - bitsUsed;
 
-    var b = buffer->Data + (buffer->OffsetBitsUnsafe >> INDEXSHIFT);
+    var b = buffer->_data + (buffer->_offsetBits >> INDEXSHIFT);
 
     *b = (*b & ((1UL << bitsUsed) - 1UL)) | (value << bitsUsed);
 
@@ -113,7 +113,7 @@ public static unsafe class FusionBurstIntegration {
       *(b + 1) = value >> bitsFree;
     }
 
-    buffer->OffsetBitsUnsafe += bits;
+    buffer->_offsetBits += bits;
   }
 
   [BurstCompile]

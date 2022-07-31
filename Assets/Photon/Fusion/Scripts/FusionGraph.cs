@@ -113,22 +113,22 @@ public class FusionGraph : FusionGraphBase {
   [SerializeField]
   bool _showUITargets;
 
-  [DrawIf(nameof(_showUITargets), Hide = true)]
+  [DrawIf(nameof(_showUITargets), true, DrawIfHideType.Hide)]
   public UI.Image GraphImg;
-  [DrawIf(nameof(_showUITargets), Hide = true)]
+  [DrawIf(nameof(_showUITargets), true, DrawIfHideType.Hide)]
   public UI.Text LabelMin;
-  [DrawIf(nameof(_showUITargets), Hide = true)]
+  [DrawIf(nameof(_showUITargets), true, DrawIfHideType.Hide)]
   public UI.Text LabelMax;
-  [DrawIf(nameof(_showUITargets), Hide = true)]
+  [DrawIf(nameof(_showUITargets), true, DrawIfHideType.Hide)]
   public UI.Text LabelAvg;
-  [DrawIf(nameof(_showUITargets), Hide = true)]
+  [DrawIf(nameof(_showUITargets), true, DrawIfHideType.Hide)]
   public UI.Text LabelLast;
-  [DrawIf(nameof(_showUITargets), Hide = true)]
+  [DrawIf(nameof(_showUITargets), true, DrawIfHideType.Hide)]
   public UI.Text LabelPer;
 
-  [DrawIf(nameof(_showUITargets), Hide = true)]
+  [DrawIf(nameof(_showUITargets), true, DrawIfHideType.Hide)]
   public UI.Dropdown _viewDropdown;
-  [DrawIf(nameof(_showUITargets), Hide = true)]
+  [DrawIf(nameof(_showUITargets), true, DrawIfHideType.Hide)]
   public UI.Button _avgBttn;
 
   float _min;

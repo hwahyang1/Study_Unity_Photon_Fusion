@@ -28,9 +28,9 @@ public class FusionStatsMeterBar : FusionGraphBase
   [SerializeField]
   bool _showUITargets;
 
-  [DrawIf(nameof(_showUITargets), Hide = true)]
+  [DrawIf(nameof(_showUITargets), true, DrawIfHideType.Hide)]
   public Text ValueLabel;
-  [DrawIf(nameof(_showUITargets), Hide = true)]
+  [DrawIf(nameof(_showUITargets), true, DrawIfHideType.Hide)]
   public Image Bar;
 
 

@@ -6,7 +6,7 @@ Photon Fusion 개인 스터디 백업 레포지토리입니다.
 
 ## 에셋
 
-- Fusion SDK 1.1.2 Nightly Build 546 ([링크](https://doc.photonengine.com/en-US/fusion/current/getting-started/sdk-download#build_546__jul_28__2022_))
+- Fusion SDK 1.1.1 F Build 512 ([링크](https://doc.photonengine.com/en-US/fusion/current/getting-started/sdk-download#build_512__jun_14__2022_))
 
 ## 참고자료
 
